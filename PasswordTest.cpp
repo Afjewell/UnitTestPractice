@@ -35,35 +35,35 @@ TEST(PasswordTest, no_leading_characters)
 	ASSERT_EQ(0, actual);
 }
 
-TEST(PasswordTest, single_letter_password)
+TEST(PasswordTest2, single_letter_password)
 {
 	Password my_password;
 	bool actual = my_password.has_mixed_case("Z");
 	ASSERT_FALSE(actual);
 }
 
-TEST(PasswordTest, no_leading_characters)
+TEST(PasswordTest2, no_leading_characters)
 {
 	Password my_password;
 	bool actual = my_password.has_mixed_case("");
 	ASSERT_FALSE(actual);
 }
 
-TEST(PasswordTest, all_lowercase)
+TEST(PasswordTest2, all_lowercase)
 {
 	Password my_password;
 	bool actual = my_password.has_mixed_case("qwertyuiop");
 	ASSERT_FALSE(actual);
 }
 
-TEST(PasswordTest, all_uppercase)
+TEST(PasswordTest2, all_uppercase)
 {
 	Password my_password;
 	bool actual = my_password.has_mixed_case("QWERTYUIOP");
 	ASSERT_FALSE(actual);
 }
 
-TEST(PasswordTest, mixed_case)
+TEST(PasswordTest2, mixed_case)
 {
 	Password my_password;
 	bool actual = my_password.has_mixed_case("QwErTyUiOp");
